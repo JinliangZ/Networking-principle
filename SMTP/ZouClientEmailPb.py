@@ -60,7 +60,7 @@ if recv4[:3] != '235':
     print('235 reply not received from server.')
 
 # Send MAIL FROM command and print server response.
-MAIL_From = 'Mail From: <bylearner@gmail.com> \r\n'
+MAIL_From = 'Mail From: <********@gmail.com> \r\n'
 sslSocket.send(MAIL_From.encode())
 recv5 = sslSocket.recv(1024).decode()
 print(recv5)
@@ -68,7 +68,7 @@ if recv5[:3] != '250':
     print('250 reply not received from server.')
 
 # Send RCPT TO command and print server response.
-RCPT_To = 'RCPT To: <jzou44@uwo.ca> \r\n'
+RCPT_To = 'RCPT To: <*******.ca> \r\n'
 sslSocket.send(RCPT_To.encode())
 recv6 = sslSocket.recv(1024).decode()
 print(recv6)
@@ -96,8 +96,8 @@ mul_alt.attach(msg_html)
 multi.attach(pic)
 
 # Send message data.
-sslSocket.send(b'From: bylearner@gmail.com\r\n')
-sslSocket.send(b'To: jzou44@uwo.ca\r\n')
+sslSocket.send(b'From: *******@gmail.com\r\n')
+sslSocket.send(b'To: *******.ca\r\n')
 sslSocket.send(b'Subject: question (b)\r\n')
 sslSocket.send(bytes(multi))
 
