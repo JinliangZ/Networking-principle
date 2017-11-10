@@ -41,7 +41,7 @@ if recv2[:3] != '334':
 
 # send username and print server response.
 #replace username with your email address
-username = 'bylearner@gmail.com'
+username = '***********@gmail.com'
 user64 = base64.b64encode(username.encode())
 sslSocket.send(user64+b'\r\n')
 recv3 = sslSocket.recv(1024).decode()
