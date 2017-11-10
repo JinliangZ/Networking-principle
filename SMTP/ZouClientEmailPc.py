@@ -4,9 +4,9 @@ from email.mime.text import MIMEText
 from email.header import Header 
 from email.mime.image import MIMEImage
 
-fromaddr = 'bylearner@gmail.com'
-toaddrs  = 'jzou44@uwo.ca'
-username = 'bylearner@gmail.com'
+fromaddr = '********@gmail.com'
+toaddrs  = '**********.ca'
+username = '********@gmail.com'
 password = '*****************'
 server = smtplib.SMTP('smtp.gmail.com:587')
 server.ehlo()
@@ -22,8 +22,8 @@ f.close()
 msg_html = MIMEText('<b>I love computer networks!</b><br><img src="cid:image1"><br>', 'html')
 multi = MIMEMultipart('related')
 multi['Subject'] = 'question (c)'
-multi['From'] = 'bylearner@gmail.com'
-multi['To'] = 'jzou44@uwo.ca'
+multi['From'] = '*********@gmail.com'
+multi['To'] = '*********.ca'
 mul_alt = MIMEMultipart('alternative')
 multi.attach(mul_alt)
 mul_alt.attach(msg_html)
