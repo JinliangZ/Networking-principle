@@ -37,7 +37,7 @@ if recv2[:3] != '334':
 
 # send username and print server response.
 #replace username with your email address
-username = 'bylearner@gmail.com'
+username = '*******@gmail.com'
 user64 = base64.b64encode(username.encode())
 sslSocket.send(user64+b'\r\n')
 recv3 = sslSocket.recv(1024).decode()
@@ -64,7 +64,7 @@ if recv5[:3] != '250':
     print('250 reply not received from server.')
 
 # Send RCPT TO command and print server response.
-RCPT_To = 'RCPT To: <jzou44@uwo.ca> \r\n'
+RCPT_To = 'RCPT To: <******.ca> \r\n'
 sslSocket.send(RCPT_To.encode())
 recv6 = sslSocket.recv(1024).decode()
 print(recv6)
@@ -80,8 +80,8 @@ if recv7[:3] != '354':
     print('354 reply not received from server.')
 
 # Send message data.
-sslSocket.send(b'From: bylearner@gmail.com\r\n')
-sslSocket.send(b'To: jzou44@uwo.ca\r\n')
+sslSocket.send(b'From: ******@gmail.com\r\n')
+sslSocket.send(b'To: ********.ca\r\n')
 sslSocket.send(b'Subject: question (a)\r\n')
 sslSocket.send(msg.encode())
 # Message ends with a single period.
