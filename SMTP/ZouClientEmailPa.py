@@ -56,7 +56,7 @@ if recv4[:3] != '235':
     print('235 reply not received from server.')
 
 # Send MAIL FROM command and print server response.
-MAIL_From = 'Mail From: <bylearner@gmail.com> \r\n'
+MAIL_From = 'Mail From: <********@gmail.com> \r\n'
 sslSocket.send(MAIL_From.encode())
 recv5 = sslSocket.recv(1024).decode()
 print(recv5)
